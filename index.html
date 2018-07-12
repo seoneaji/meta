@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Reply-To" content="naver@naver.com">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>META</title>
+	<link rel="stylesheet" href="asset/css/reset.css">
+	<link rel="stylesheet" href="asset/css/style.css">
+</head>
+<body>
+<div class="wrap">
+	<h1>META</h1>
+
+	<section>
+		<h2>META 태그란?</h2>
+		<p>
+			메타데이터는 "데이터에 관한 데이터"를 의미<br>
+			검색엔진최적화(SEO) – 메타태그(META TAG)<br>
+			문서에 관한 정보로 구성되는데 어떤 정보로 구성되어야 하는가에 대한 규칙은 정해진 바 없다.
+			일반적으로 제공자(author), 저작권(copyright), 키워드(keyword), 언어(language)등 문서의 성격을 파악하는데
+			도움을 줄 수 있는 정보가 포함된다. 이러한 정보는 사람보다는 기계(브라우저, 검색엔진)를 위한 것이다.<br><br>
+
+			이름에서 짐작할 수 있듯 (x)html 태그 중 하나이고 '메타', 즉, 문서 그 자체를 설명하는 태그를 메타 태그라 합니다. 일반 (x)html 태그는 문서 내용물을 어떻게 보이게 하는가를 규정하기 위해 마크 업을 합니다. 이와 달리 메타 태그는 (x)html 문서가 어떤 내용을 담고 있고, 그 문서의 핵심어는 무엇이며, 누가 만들었는지, 문자 세트는 어떤 것을 사용하는지 등의 메타 정보를 담고 있습니다.
+			metadata(정보에 대한 정보를) 제공하는 역할로 사이트 자체에 대한 정보나 저작자, 문서의 언어등을 말한다.
+			화면에는 별달리 표시되는 기능은 없으나 검색 엔진, 브라우저에 읽힙니다.
+		</p>
+	</section>
+
+	<section>
+		<h2>META 태그의 형태</h2>
+		<p>
+			head 태그 사이 또는 body 태그 앞쪽에 위치 명시해야며, "속성 = 값"의 작성 형태를 가짐
+		</p>
+		<table>
+			<colgorup>
+				<col style="width:50%">
+				<col style="width:50%">
+			</colgorup>
+			<thead>
+			<tr>
+				<th>xhtml</th>
+				<th>html</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>
+					<pre>
+						&#60;<span class="tag">meta</span> &#47;&#62;
+					</pre>
+				<td>
+					<pre>
+						&#60;<span class="tag">meta</span>&#62;
+					</pre>
+				</td>
+			</tr>
+				<td>
+					<pre>
+						&#60;<span class="tag">meta</span> <span class="prop">http-equiv</span>="<span class="value">"Content-Type</span>" <span class="prop">content</span>=<span class="value">"text/html; charset=utf-8</span>" &#47;&#62;
+					</pre>
+				<td>
+					<pre>
+						&#60;<span class="tag">meta</span> <span class="prop">charset</span>="<span class="value">UTF-8</span>" &#62;
+					</pre>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section>
+		<h2>META TAG 속성</h2>
+
+		<h3>name="정보 이름"</h3>
+		<p>몇 개의 meta 정보의 이름을 정할 수 있으며 지정하지 않으면 http-equiv 와 같은 기능을 합니다.</p>
+
+		<h3>content="정보값"</h3>
+		<p>meta 정보의 내용을 지정합니다.</p>
+
+		<h3>http-equiv="항목명"</h3>
+		<p>웹 브라우저가 서버에 명령을 내리는 속성으로 name 속성을 대신하여 사용될 수 있으며, HTML 문서가 응답 헤더와 함께 웹 서버로부터 웹 브라우저에 전송되었을 때에만 의미를 갖습니다.</p>
+	</section>
+
+	<section>
+		<h2>META TAG 종류</h2>
+
+		<div class="case-box">
+			<h3>name="Keywords"</h3>
+			<p>
+				키워드를 지정<br>
+				이 키워드는 문서 내용과 관련 있는 단어로 작성되며 콤마를 이용하여 복수의 키워드를 제공할 수 있다.
+			</p>
+			<pre>
+				&#60;<span class="tag">meta</span> <span class="prop">name</span>="<span class="value">Keywords</span>" <span class="prop">content</span>="<span class="value">Web, html, 웹 표준</span>" &#62;
+			</pre>
+
+			<p class="point">
+				웹 문서의 META 요소를 이용하여 키워드(keyword)나 설명(description)을 제공할 수 있다. 이 키워드와 설명은 웹 문서에 나타나는 것이 아니라 검색엔진과 같은 사용자도구가 문서 내용을 예측할 수 있도록 돕는다. 물론 스팸 키워드처럼 관련 없는 키워드와 설명이 임의로 포함될 수 있기 때문에 구글과 같은 검색엔진 서비스는 메타데이터의 키워드와 설명을 제한적으로만 참고하거나 아예 참고하지 않는다.
+			</p>
+		</div>
+
+		<div class="case-box">
+			<h3>name="description"</h3>
+			<p>문서 설명을 지정한다. 검색엔진은 이 문서 설명을 검색 결과로 보여준다. 문서 내에서 한 번만 지정할 수 있다.</p>
+			<pre>
+				&#60;<span class="tag">meta</span> <span class="prop">name</span>="<span class="value">Description</span>" <span class="prop">content</span>="<span class="value">Web, html, 웹 표준</span>" &#62;
+			</pre>
+		</div>
+
+		<div class="case-box">
+			<h3>name="author"</h3>
+			<p>저작자 이름(author)을 지정한다. 일반적으로 제공자나 개발자 이름을 기입한다.</p>
+			<pre>
+				&#60;<span class="tag">meta</span> <span class="prop">name</span>="<span class="value">author</span>" <span class="prop">content</span>="<span class="value">지선애</span>" &#62;
+			</pre>
+		</div>
+
+		<div class="case-box">
+			<h3>name="generator"</h3>
+			<p>문서 작성에 사용한 저작 도구를 지정한다. 저작자가 저작 도구를 사용하지 않고 직접 작성한 때에는 이 속성값을 사용하지 않는다.</p>
+			<pre>
+				&#60;<span class="tag">meta</span> <span class="prop">name</span>="<span class="value">generator</span>" <span class="prop">content</span>="<span class="value">webStom</span>" &#62;
+			</pre>
+		</div>
+
+		<div class="case-box">
+			<h3>name="application-name"</h3>
+			<p>웹 애플리케이션 이름을 지정한다. 웹 애플리케이션이 아닌 때에는 이 속성값을 사용할 수 없으며 문서 내에서 한 번만 지정할 수 있다.</p>
+			<pre>
+				&#60;<span class="tag">meta</span> <span class="prop">name</span>="<span class="value">application-name</span>" <span class="prop">content</span>="<span class="value">Gmail</span>" &#62;
+			</pre>
+		</div>
+
+
+		<div class="case-box">
+			<h3>검색 로봇 제어</h3>
+			<pre>
+				&#60;<span class="tag">meta</span> <span class="prop">name</span>="<span class="value">Robots</span>" <span class="prop">content</span>="<span class="value">noindex, nofollow</span>" &#62;
+			</pre>
+		</div>
+
+		<div class="case-box">
+			<h3>format-detection</h3>
+			<p>ios safari 웹페이지는 숫자를 전화번호로 감지하여 전화번호로 호출하는 링크를 만드는데 이를 막음</p>
+			<pre>
+				&#60;<span class="tag">meta</span> <span class="prop">name</span>="<span class="value">format-detection</span>" <span class="prop">content</span>="<span class="value">telephone=no</span>" &#62;
+			</pre>
+		</div>
+
+
+		<div class="case-box">
+			<h3>charset(문자세트) 속성</h3>
+			<p>
+				charset 속성은 문자 세트를 지정<br>
+				문자 세트는 사용언어를 표현하는 데 필요한 모든 문자를 모아둔 것으로, 여기에는 기호, 공백 등도 포함 <br>
+				문자 인코딩은 문자 세트를 컴퓨터에서 사용하기 적합한 형식으로 변환하는 것<br>
+				즉, 문자 세트를 기계가 이해할 수 있는 형식으로 만드는 규칙이다. <br>
+				이 규칙에 따라 하나의 문자 세트는 여러 개의 인코딩을 가질 수 있으며, 브라우저가 인코딩을 정확하게 알아야만 HTML문서를 제대로 해석하여 문자로 표현할 수 있다.<br>
+				모든 HTML 문서는 반드시 인코딩 방식을 선언해야 하며, 이 선언은 문서당 한 번만 이루어져야 한다.<br>
+				물론 인코딩 방식을 선언하지 않더라도 브라우저가 알아서 HTML 문서를 제대로 렌더링할 수도 있으나, 모든 브라우저가 그런것은 아니다.<br><br>
+
+				charset은 &#60;title&#62; 이전에 선언해야 합니다.
+			</p>
+
+			<strong>UTF-8 (유니코드)</strong>
+			<ul>
+				<li>유니코드는 전세계의 모든 문자를 표현할 수 있는 인코딩이다. 한글이라고는 구경해 본 적도 없는 세계 방방 곳곳의 어느 컴퓨터에서도 우리가 작성한 한글을 문제 없이 표현할 수 있게 된다.</li>
+				<li>한글 한 자를 3바이트로 처리하기 때문에 문서가 다소 커질수가 있으나 공백이나 영문 한 자는 1바이트로 처리하는 유연함을 보여 준다.</li>
+				<li>문자셋을 UTF-8로 작성한다면 HTML 파일을 저장할 때 파일 타입도 UTF-8로 저장해야 한다.</li>
+			</ul>
+			<strong>브라우저가 문서의 문자 인코딩을 결정하는 우선순위</strong>
+			<ol>
+				<li>Content-Type 필드의 HTTP charset 파라미터</li>
+				<li>META 요소의 http-equiv에 의한 Content-Type과 charset 속성</li>
+				<li>특정 요소의 charset 속성</li>
+			</ol>
+			<strong>인코딩종류</strong>
+			<ul>
+				<li>UTF-8, UTF-16, UTF-32  : 모든 언어의 문자를 지원하는 인코딩</li>
+				<li>EUC-KR / ISO-2022-KR : 한국어 문자 인코딩</li>
+				<li>EUC-JP / ISO-2022-JP : 일본어 문자 인코딩</li>
+				<li>G2312 : 중국어 문자 인코딩</li>
+				<li>IO-8859-1 : 북미, 서부유럽, 라틴 아메리카, 카리브해, 캐나다, 아프리카</li>
+				<li>IO-8859-2 : 동유럽</li>
+				<li>IO-8859-3 : 남동유럽, 에스페란토</li>
+				<li>IO-8859-4 : 스칸디나비아, 발트 연안국</li>
+				<li>IO-8859-5 : 불가리아어, 벨로루시어, 러시아어, 마케도니아</li>
+				<li>IO-8859-6 : 아랍문자</li>
+				<li>IO-8859-7 : 현대 그리스문자 언어뿐 만 아니라 수학 기호</li>
+				<li>IO-8859-8 : 히브리어 문자를 사용하는 언어</li>
+				<li>IO-8859-9 : 터키어</li>
+				<li>IO-8859-10 : 에스키모, 북유럽 언어</li>
+			</ul>
+
+			<p class="ponit">
+				한글 인코딩 방식은 크게 두가지로 나뉩니다. UTF-8 과 EUC-KR 방식
+			</p>
+			<table class="de">
+				<colgroup>
+					<col style="width:50%">
+					<col style="width:50%">
+				</colgroup>
+				<thead>
+				<tr>
+					<th>UTF-8</th>
+					<th>EUC-KR </th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>다국어 인코딩</td>
+					<td>한국어, 한국에서 사용되는 한자, 영문 특수문자 인코딩</td>
+				</tr>
+				<tr>
+					<td>한글 1글자가 3바이트 <br>영문, 숫자, 공백, 특수 기호 등은 1바이트</td>
+					<td>한글 1자가 2바이트</td>
+				</tr>
+				<tr>
+					<td>한글 1글자가 3바이트</td>
+					<td>한글 1자가 2바이트</td>
+				</tr>
+				</tbody>
+			</table>
+			<strong>작성법</strong>
+			<pre>
+				&#60;<span class="tag">meta</span> <span class="prop">charset</span>="<span class="value">utf-8</span>" &#62;
+				&#60;<span class="tag">meta</span> <span class="prop">http-equiv</span>="<span class="value">Content-Type</span>" <span class="prop">content</span>=<span class="value">"text/html; charset=utf-8</span>" &#47;&#62;
+			</pre>
+		</div>
+
+
+		<div class="case-box">
+			<h3>viewport</h3>
+			<strong>정의</strong>
+			<p>
+				모바일 브라우저들은 viewport 로 알려진 가상 window상에 페이지를 렌더링합니다. <br>
+				즉 화면(Display) 상의 표시 영역을 뜻합니다. <br>
+				모바일 Safari는 viewport meta태그를 도입해 웹 개발자들이 viewport 크기와 스케일을 조정할 수 있게 했고, <br>
+				웹 표준은 아니지만 이제 대부분 모바일 브라우저들도 이를 지원합니다.<br><br>
+
+				데스크탑과 모바일의 viewport는 다른점이 있습니다. <br>
+				데스크탑의 viewport는 브라우저 창(visible area)의 viewport와 같고, <br>
+				사용자가 브라우저 창의 크기를 조절하면서 viewport의 크기도 조절할 수 있습니다. <br>
+				웹페이지가 viewport보다 크면, 스크롤을 하여 나머지 영역을 볼 수 있습니다. <br>
+				반면에 모바일 viewport는 웹브라우저 창보다 크거나 작을 수 있고 상하좌우로 움직이거나, <br>
+				더블탭, 줌인, 줌아웃을 통해 viewport의 배율을 변경할 수 있습니다.(크기가 아닙니다)
+			</p>
+			<strong>필요한 이유</strong>
+			<p>
+				모바일 브라우저에서 viewport가 중요한 이유는 모바일 브라우저가 웹 페이지를 브라우징 하는 특징에 있습니다.
+				현재 스마트폰 브라우저는 모바일 환경에서도 데스크탑 환경처럼 웹 페이지 전체를 자연스럽게 브라우징 할 수 있도록 풀브라우징을 지원합니다.
+				이 때문에 데스크탑에 기반하여 설계된 웹페이지를 모바일에서 보면 기본 viewport가 980px 이고, 이로 인해 내용이 작게 보입니다.
+				(width가 980px 이상인 컨텐츠가 있다면 좌우로 스크롤 됨) 간단히 말하면 작은 화면의 모바일 단말기에 웹 페이지 모두를 표시하려하니 전체적인 페이지의 배율이 조정되는것 입니다.
+				결과적으로 모바일 화면에 맞도록 전체적인 페이지가 축소되어 보이지만 페이지의 컨텐츠는 배율축소가 발생해 가독성이 떨어지게 됩니다.
+				바로 이때 viewport를 설정하면 다양한 모바일 기기에서도 페이지의 너비나 화면 배율을 설정할 수 있습니다.
+			</p>
+			<strong>사용법</strong>
+			<pre>
+				&#60;<span class="tag">meta</span> <span class="prop">name</span>="<span class="value">viewport</span>" <span class="prop">content</span>="<span class="value">width=device-width, user-scalable=no</span>" &#62;
+			</pre>
+			<strong>1. 속성</strong>
+			<ul>
+				<li>width : viewport의 가로 크기를 조정한다. 일반적인 숫자값이 들어갈 수도 있고, device-width와 같은 특정한 값을 사용할 수도 있다. device-width는 100% 스케일에서 CSS 픽셀들로 계산된 화면의 폭을 의미한다.</li>
+				<li>height : viewport의 세로 크기를 조정한다.</li>
+				<li>initial-scale : 페이지가 처음 로딩될 때 줌 레벨을 조정한다. 값이 1일때는 CSS 픽셀과 기기 종속적인 픽셀 간의 1:1 관계를 형성한다.</li>
+				<li>minimum-scale : viewport의 최소 배율값, 기본값은 0.25이다.</li>
+				<li>maximum-scale : viewport의 최대 배율값, 기본값은 1.6이다.</li>
+				<li>user-scalable : 사용자의 확대/축소 기능을 설정 (yes/no) , 기본값은 yes이다.</li>
+			</ul>
+			<strong>2. 정의된 속성 값</strong>
+			<ul>
+				<li>device-width : 기기의 가로 넓이 픽셀 값 (웹페이지의 가로(width) 값은 기기가 사용하는 가로 넓이 값(device-width) 만큼 적용하여 사용하라는 의미)</li>
+				<li>device-height : 기기의 세로 높이 픽셀 값</li>
+			</ul>
+			<strong>3. 주의사항</strong>
+			<ul>
+				<li>contents보다 작은 viewport width/height를 설정하면 무시된다.</li>
+				<li>viewport에서 initial-scale을 설정하지 않고 width/height를 설정하면 전체화면이 표시된다.</li>
+				<li>viewport에서 initial-scale도 width/height도 설정하지 않으면 width=980px/height=1091px이 된다.</li>
+				<li>표시영역과 contents의 크기가 일치하지 않을때 initial-scale를 설정하면, 의도하지 않은 layout이 발생한다.</li>
+			</ul>
+
+			<strong>반응형 웹 디자인</strong>
+			<p>
+				패블릿, 태블릿, 데스크탑, 게임콘솔, 티비, 웨어러블 기기 등등 정말 다양한 화면 크기가 있습니다.
+				화면 크기는 언제나 변하기 때문에 사이트는 어떤 화면 크기에도 언제나 적응 가능하도록 설계되어야 합니다.
+				미디어 쿼리(@media)는 장치에 따라 각기 다른 레이아웃을 만들거나, 다른 미디어 종류에 따라 다른 css 코드를 작성하는 등, 반응형 웹 페이지를 작성할 때 사용합니다.
+				부트스트랩은 CSS 미디어 쿼리를 사용해 반응형으로 휴대폰에서부터 태블릿, 데스크탑까지 적용되는 사이트를 만들 수 있도록 도와주는 HTML, CSS, JS 프레임워크입니다.
+				저도 여러번 간단하게 사용했던 적이 있습니다. 적절한 렌더링과 확대/축소를 위해 부트스트랩 시작 페이지에서는 다음 코드를 <head>에 추가하라고 명시합니다.
+			</p>
+		</div>
+
+		<div class="case-box">
+			<h3>open graph 태그</h3>
+			<p>
+				링크의 미리보기 제목, 설명, 이미지를 결정하는 태그<br><br>
+				오픈그래프는 어떤 HTML 문서의 메타정보를 쉽게 표시하기 위해서
+				메타정보에 해당하는 제목, 설명, 문서의 타입, 대표 URL 등 다양한 요소들에 대해서 사람들이 통일해서 쓸 수 있도록
+				정의해놓은 프로토콜이며 페이스북에 의하여 기존의 다양한 메타 데이터 표기 방법을 참조하여 만들어졌습니다.<br>
+				그 간편함으로 인하여 현재는 그 창시자인 페이스북은 물론이고, 네이버 블로그, 카카오톡 등에서도 널리 사용하고 있습니다.
+			</p>
+			<img src="http://blog.ab180.co/content/images/2016/05/Open-Graph------------.png" alt="">
+			<ol>
+				<li>사용자가 링크를 입력창에 입력합니다.</li>
+				<li>페이스북, 네이버 블로그, 카카오톡은 입력창의 문자열이 "링크"라는 것을 파악합니다. (흔히 말하는 정규표현식으로 해당 문자열이 링크라는 것을 알아냅니다.)</li>
+				<li>링크라는 것이 파악되면 페이스북, 네이버 블로그, 카카오톡의 크롤러는 미리 그 웹사이트를 방문해서 HTML head의 오픈그래프(Open Graph) 메타 데이터를 긁어옵니다.</li>
+				<li>이중에서도 og:title, og:description, og:image가 각각 제목, 설명, 이미지의 정보를 나타냅니다.</li>
+				<li>그리고 그 정보를 바탕으로 미리보기 화면을 생성해주게 됩니다.</li>
+			</ol>
+		</div>
+	</section>
+
+
+</div>
+</body>
+</html>
